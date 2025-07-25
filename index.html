@@ -1,10 +1,317 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Portfolio – Coming Soon</title>
-  </head>
-  <body>
-    <h1>Welcome to My Portfolio!</h1>
-    <p>Site is launching soon. Stay tuned.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>R R SHANMUGAPRIYA – Data Science & AI Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --secondary: #f3f4f6;
+      --accent: #be185d;
+      --dark: #22223b;
+      --light: #f8fafc;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, var(--primary), var(--accent) 85%);
+      color: var(--dark);
+      min-height: 100vh;
+    }
+    header, section {
+      max-width: 800px;
+      margin: 0 auto 36px auto;
+      background: var(--light);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(99,102,241,0.10);
+      padding: 40px 32px;
+    }
+    header {
+      text-align: center;
+      margin-top: 32px;
+      background: linear-gradient(120deg, var(--primary) 75%, var(--accent));
+      color: #fff;
+      position: relative;
+    }
+    header img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      margin-top: 8px;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    header h3 {
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+    .cta-buttons a {
+      padding: 12px 28px;
+      margin: 8px 7px;
+      border: none;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.05em;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+      display: inline-block;
+    }
+    .cta-buttons a.primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .cta-buttons a.secondary:hover,
+    .cta-buttons a.primary:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 16px;
+      border-bottom: 1.5px solid var(--secondary);
+      padding-bottom: 4px;
+      letter-spacing: 1px;
+    }
+    .about-text {
+      font-size: 1.08em;
+      line-height: 1.7;
+      margin-bottom: 0;
+      color: #38385f;
+    }
+    .skills-table, .education-table, .portfolio-table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      font-size: 1em;
+    }
+    .skills-table th, .skills-table td,
+    .education-table th, .education-table td,
+    .portfolio-table th, .portfolio-table td {
+      padding: 12px 12px;
+      border: 1px solid #e5e7eb;
+      text-align: left;
+    }
+    .skills-table th, .education-table th, .portfolio-table th {
+      background: var(--secondary);
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .portfolio-table a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .portfolio-table .gh-icon {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .project-card {
+      margin-bottom: 26px;
+      background: #f3f6fa;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 7px rgba(99,102,241,0.05);
+      transition: box-shadow 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+      background: #f1e5f9;
+    }
+    .project-card h4 {
+      margin: 6px 0 12px 0;
+      font-size: 1.2em;
+      color: var(--primary);
+    }
+    .project-card .buttons a {
+      margin-right: 8px;
+      color: #fff;
+      background: var(--primary);
+      padding: 6px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      margin-bottom: 6px;
+      display: inline-block;
+      border: none;
+      transition: background 0.16s;
+    }
+    .project-card .buttons a:hover {
+      background: var(--accent);
+    }
+    .project-card img.gh-icon {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 2px;
+      filter: grayscale(0.3);
+    }
+    @media (max-width: 700px) {
+      header, section {
+        padding: 24px 10px;
+      }
+      h1 {
+        font-size: 1.4em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      .skills-table, .education-table, .portfolio-table {
+        font-size: 0.94em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header>
+    <img src="https://via.placeholder.com/120" alt="Profile Picture">
+    <h1>R R SHANMUGAPRIYA</h1>
+    <h3>Creating Exceptional Digital Experiences Through Data Analysis</h3>
+    <div class="cta-buttons">
+      <a href="#portfolio" class="primary">View My Work</a>
+      <a href="#contact" class="secondary">Get In Touch</a>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="about-text">
+      An accomplished undergraduate with a robust foundation in <b>Artificial Intelligence, Machine Learning, Computer Vision, Deep Learning, and LLMs</b>.<br>
+      Certified <b>Master Data Science Professional</b> (Guvi, IIT Pravartak) and Sociology graduate (MOP Vaishnav College for Women, Chennai).
+      <br><br>
+      From a young age, I’ve been fascinated by patterns—not just in numbers, but in human behavior and society. My sociology background grants me a critical lens on data science: I ask why data exists, consider the human impact of algorithms, and ensure ethical, inclusive solutions.<br>
+      Projects like my Interactive Tourism Analytics Dashboard and Solar Panel Defect Detection system blend technical rigor with social good.<br><br>
+      <b>Let's use data for positive, impactful change.</b>
+    </p>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h2>Skills & Technologies</h2>
+    <table class="skills-table">
+      <tr>
+        <th>Main Areas</th>
+        <th>Tools & Languages</th>
+        <th>Frameworks & Libraries</th>
+      </tr>
+      <tr>
+        <td>AI, ML, DL, NLP, LLMs</td>
+        <td>Python, SQL</td>
+        <td>PyTorch, TensorFlow, Keras</td>
+      </tr>
+      <tr>
+        <td>Computer Vision</td>
+        <td>MySQL</td>
+        <td>Scikit-learn, Pandas, NumPy</td>
+      </tr>
+      <tr>
+        <td>Dashboards & Apps</td>
+        <td>Jupyter, Colab, Git</td>
+        <td>Streamlit, OpenCV</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- PORTFOLIO/PROJECTS SECTION -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <!-- Project card 1 -->
+    <div class="project-card">
+      <h4>Next Word Prediction System</h4>
+      <div class="buttons">
+        <a href="https://next-word-prediction-dknta59uq9kt6qfwsq75me.streamlit.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourusername/nextword-prediction" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
+          Code
+        </a>
+      </div>
+      <p>
+        <b>Tech Used:</b> Python, PyTorch, LSTM, GPT-2, Hugging Face<br>
+        <b>Achievements:</b> Built on WikiText-2, validation perplexity: 21.43, 76.2% fluency improvement
+      </p>
+    </div>
+    <!-- Project card 2 -->
+    <div class="project-card">
+      <h4>Solar Panel Defect Detection</h4>
+      <div class="buttons">
+        <a href="https://your-solarpanel-demo-link.com" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourusername/solar-panel-defect-detection" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
+          Code
+        </a>
+      </div>
+      <p>
+        <b>Tech Used:</b> Python, PyTorch, ResNet-152, YOLOv8n, OpenCV<br>
+        <b>Achievements:</b> 88.76% test accuracy, reduced manual inspection by 60%
+      </p>
+    </div>
+    <!-- Project card 3 -->
+    <div class="project-card">
+      <h4>Interactive Tourism Analytics Dashboard</h4>
+      <div class="buttons">
+        <a href="https://tourism-experience-analysis-qrrakq97ev3fulytg6u6re.streamlit.app/" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourusername/tourism-dashboard" target="_blank">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
+          Code
+        </a>
+      </div>
+      <p>
+        <b>Tech Used:</b> Python, Scikit-learn, XGBoost, Streamlit<br>
+        <b>Achievements:</b> 40% improvement in personalized travel recommendations, 0.7283 regression R², 67.46% classification accuracy, F1-score 0.83
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education">
+    <h2>Education</h2>
+    <table class="education-table">
+      <tr>
+        <th>Institution</th>
+        <th>Program/Credential</th>
+        <th>Dates</th>
+        <th>Highlights</th>
+      </tr>
+      <tr>
+        <td>IITM Pravartak / Guvi</td>
+        <td>Certified Advanced Programming & Master Data Science</td>
+        <td>Jan 2025 – May 2025</td>
+        <td>Master certification</td>
+      </tr>
+      <tr>
+        <td>MOP Vaishnav College for Women</td>
+        <td>B.A. in Sociology, Chennai</td>
+        <td>Jul 2019 – Apr 2022</td>
+        <td>CGPA: 7.52</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <b>Email:</b> <a href="mailto:rrshanmugapriya01@gmail.com">rrshanmugapriya01@gmail.com</a><br>
+      <b>GitHub:</b> <a href="https://github.com/rrshanmugapriya01gmailcom" target="_blank">github.com/rrshanmugapriya01gmailcom</a><br>
+      <b>LinkedIn:</b> <a href="https://linkedin.com/in/shanmugapriya-rr" target="_blank">linkedin.com/in/shanmugapriya-rr</a><br>
+      <b>Phone:</b> 9360721729
+    </p>
+  </section>
+</body>
 </html>
