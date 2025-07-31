@@ -1,317 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>R R SHANMUGAPRIYA – Data Science & AI Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --primary: #6366f1;
-      --secondary: #f3f4f6;
-      --accent: #be185d;
-      --dark: #22223b;
-      --light: #f8fafc;
-    }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, var(--primary), var(--accent) 85%);
-      color: var(--dark);
-      min-height: 100vh;
-    }
-    header, section {
-      max-width: 800px;
-      margin: 0 auto 36px auto;
-      background: var(--light);
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(99,102,241,0.10);
-      padding: 40px 32px;
-    }
-    header {
-      text-align: center;
-      margin-top: 32px;
-      background: linear-gradient(120deg, var(--primary) 75%, var(--accent));
-      color: #fff;
-      position: relative;
-    }
-    header img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      border: 4px solid #fff;
-      object-fit: cover;
-      margin-bottom: 16px;
-    }
-    header h1 {
-      margin-top: 8px;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    header h3 {
-      font-weight: 400;
-      letter-spacing: 1px;
-      margin-top: 8px;
-      margin-bottom: 20px;
-    }
-    .cta-buttons a {
-      padding: 12px 28px;
-      margin: 8px 7px;
-      border: none;
-      border-radius: 6px;
-      background: #fff;
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 1.05em;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-      box-shadow: 0 2px 8px rgba(99,102,241,0.10);
-      display: inline-block;
-    }
-    .cta-buttons a.primary {
-      background: var(--primary);
-      color: #fff;
-    }
-    .cta-buttons a.secondary:hover,
-    .cta-buttons a.primary:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-    h2 {
-      color: var(--primary);
-      font-size: 2em;
-      margin-bottom: 16px;
-      border-bottom: 1.5px solid var(--secondary);
-      padding-bottom: 4px;
-      letter-spacing: 1px;
-    }
-    .about-text {
-      font-size: 1.08em;
-      line-height: 1.7;
-      margin-bottom: 0;
-      color: #38385f;
-    }
-    .skills-table, .education-table, .portfolio-table {
-      width: 100%;
-      margin: 20px 0;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      font-size: 1em;
-    }
-    .skills-table th, .skills-table td,
-    .education-table th, .education-table td,
-    .portfolio-table th, .portfolio-table td {
-      padding: 12px 12px;
-      border: 1px solid #e5e7eb;
-      text-align: left;
-    }
-    .skills-table th, .education-table th, .portfolio-table th {
-      background: var(--secondary);
-      color: var(--dark);
-      font-weight: 600;
-    }
-    .portfolio-table a {
-      color: var(--primary);
-      text-decoration: underline;
-      font-weight: 500;
-    }
-    .portfolio-table .gh-icon {
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-    .project-card {
-      margin-bottom: 26px;
-      background: #f3f6fa;
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: 0 2px 7px rgba(99,102,241,0.05);
-      transition: box-shadow 0.2s;
-    }
-    .project-card:hover {
-      box-shadow: 0 8px 32px rgba(99,102,241,0.18);
-      background: #f1e5f9;
-    }
-    .project-card h4 {
-      margin: 6px 0 12px 0;
-      font-size: 1.2em;
-      color: var(--primary);
-    }
-    .project-card .buttons a {
-      margin-right: 8px;
-      color: #fff;
-      background: var(--primary);
-      padding: 6px 14px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1em;
-      margin-bottom: 6px;
-      display: inline-block;
-      border: none;
-      transition: background 0.16s;
-    }
-    .project-card .buttons a:hover {
-      background: var(--accent);
-    }
-    .project-card img.gh-icon {
-      width: 20px;
-      vertical-align: middle;
-      margin-right: 2px;
-      filter: grayscale(0.3);
-    }
-    @media (max-width: 700px) {
-      header, section {
-        padding: 24px 10px;
-      }
-      h1 {
-        font-size: 1.4em;
-      }
-      h2 {
-        font-size: 1.2em;
-      }
-      .skills-table, .education-table, .portfolio-table {
-        font-size: 0.94em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmugapriya R R - AI/ML Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <header>
-    <img src="https://via.placeholder.com/120" alt="Profile Picture">
-    <h1>R R SHANMUGAPRIYA</h1>
-    <h3>Creating Exceptional Digital Experiences Through Data Analysis</h3>
-    <div class="cta-buttons">
-      <a href="#portfolio" class="primary">View My Work</a>
-      <a href="#contact" class="secondary">Get In Touch</a>
-    </div>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Shanmugapriya R R</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p class="about-text">
-      An accomplished undergraduate with a robust foundation in <b>Artificial Intelligence, Machine Learning, Computer Vision, Deep Learning, and LLMs</b>.<br>
-      Certified <b>Master Data Science Professional</b> (Guvi, IIT Pravartak) and Sociology graduate (MOP Vaishnav College for Women, Chennai).
-      <br><br>
-      From a young age, I’ve been fascinated by patterns—not just in numbers, but in human behavior and society. My sociology background grants me a critical lens on data science: I ask why data exists, consider the human impact of algorithms, and ensure ethical, inclusive solutions.<br>
-      Projects like my Interactive Tourism Analytics Dashboard and Solar Panel Defect Detection system blend technical rigor with social good.<br><br>
-      <b>Let's use data for positive, impactful change.</b>
-    </p>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Shanmugapriya R R</span>
+                    </h1>
+                    <h2 class="hero-subtitle">AI/ML Engineer & Data Scientist</h2>
+                    <p class="hero-description">
+                        Passionate about developing innovative AI solutions with expertise in Machine Learning, 
+                        Deep Learning, Computer Vision, and Large Language Models.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:rrshanumugapriya01@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/rrshanmugapriya01gmailcom" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/shanmugapriya-rr/" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="tel:9360721729" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-photo">
+                        <img src="WhatsApp Image 2025-07-31 at 13.15.32_d40a1087.jpg" alt="Shanmugapriya R R" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <h2>Skills & Technologies</h2>
-    <table class="skills-table">
-      <tr>
-        <th>Main Areas</th>
-        <th>Tools & Languages</th>
-        <th>Frameworks & Libraries</th>
-      </tr>
-      <tr>
-        <td>AI, ML, DL, NLP, LLMs</td>
-        <td>Python, SQL</td>
-        <td>PyTorch, TensorFlow, Keras</td>
-      </tr>
-      <tr>
-        <td>Computer Vision</td>
-        <td>MySQL</td>
-        <td>Scikit-learn, Pandas, NumPy</td>
-      </tr>
-      <tr>
-        <td>Dashboards & Apps</td>
-        <td>Jupyter, Colab, Git</td>
-        <td>Streamlit, OpenCV</td>
-      </tr>
-    </table>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Summary</h3>
+                    <p>
+                        An accomplished undergraduate with a robust foundation in Artificial Intelligence, Machine Learning, 
+                        Computer Vision, Deep Learning, and Large Language Models (LLMs). I possess proven ability in 
+                        deploying AI libraries such as TensorFlow and PyTorch, with practical experience in language modeling, 
+                        recommender systems, and image-based classification.
+                    </p>
+                    <p>
+                        I am passionate about developing innovative and impactful AI solutions that solve real-world problems. 
+                        My expertise spans across various domains including natural language processing, computer vision, 
+                        and predictive analytics.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>6+</h4>
+                        <p>Major Projects</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>88.76%</h4>
+                        <p>Best Model Accuracy</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>76.2%</h4>
+                        <p>Language Fluency Improvement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- PORTFOLIO/PROJECTS SECTION -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <!-- Project card 1 -->
-    <div class="project-card">
-      <h4>Next Word Prediction System</h4>
-      <div class="buttons">
-        <a href="https://next-word-prediction-dknta59uq9kt6qfwsq75me.streamlit.app/" target="_blank">Live Demo</a>
-        <a href="https://github.com/yourusername/nextword-prediction" target="_blank">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
-          Code
-        </a>
-      </div>
-      <p>
-        <b>Tech Used:</b> Python, PyTorch, LSTM, GPT-2, Hugging Face<br>
-        <b>Achievements:</b> Built on WikiText-2, validation perplexity: 21.43, 76.2% fluency improvement
-      </p>
-    </div>
-    <!-- Project card 2 -->
-    <div class="project-card">
-      <h4>Solar Panel Defect Detection</h4>
-      <div class="buttons">
-        <a href="https://your-solarpanel-demo-link.com" target="_blank">Live Demo</a>
-        <a href="https://github.com/yourusername/solar-panel-defect-detection" target="_blank">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
-          Code
-        </a>
-      </div>
-      <p>
-        <b>Tech Used:</b> Python, PyTorch, ResNet-152, YOLOv8n, OpenCV<br>
-        <b>Achievements:</b> 88.76% test accuracy, reduced manual inspection by 60%
-      </p>
-    </div>
-    <!-- Project card 3 -->
-    <div class="project-card">
-      <h4>Interactive Tourism Analytics Dashboard</h4>
-      <div class="buttons">
-        <a href="https://tourism-experience-analysis-qrrakq97ev3fulytg6u6re.streamlit.app/" target="_blank">Live Demo</a>
-        <a href="https://github.com/yourusername/tourism-dashboard" target="_blank">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="gh-icon">
-          Code
-        </a>
-      </div>
-      <p>
-        <b>Tech Used:</b> Python, Scikit-learn, XGBoost, Streamlit<br>
-        <b>Achievements:</b> 40% improvement in personalized travel recommendations, 0.7283 regression R², 67.46% classification accuracy, F1-score 0.83
-      </p>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Areas of Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Natural Language Processing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- EDUCATION SECTION -->
-  <section id="education">
-    <h2>Education</h2>
-    <table class="education-table">
-      <tr>
-        <th>Institution</th>
-        <th>Program/Credential</th>
-        <th>Dates</th>
-        <th>Highlights</th>
-      </tr>
-      <tr>
-        <td>IITM Pravartak / Guvi</td>
-        <td>Certified Advanced Programming & Master Data Science</td>
-        <td>Jan 2025 – May 2025</td>
-        <td>Master certification</td>
-      </tr>
-      <tr>
-        <td>MOP Vaishnav College for Women</td>
-        <td>B.A. in Sociology, Chennai</td>
-        <td>Jul 2019 – Apr 2022</td>
-        <td>CGPA: 7.52</td>
-      </tr>
-    </table>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                <div class="project-header">
+                        <h3>Next Word Prediction System</h3>
+                        <div class="project-links">
+                            <a href="https://next-word-prediction-dknta59uq9kt6qfwsq75me.streamlit.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/rrshanmugapriya01gmailcom/Next-Word-Prediction" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">LSTM</span>
+                        <span class="tech-tag">GPT-2</span>
+                        <span class="tech-tag">Hugging Face</span>
+                    </div>
+                    <p class="project-description">
+                        Developed LSTM and Transformer-based GPT-2 models on the WikiText-2 dataset. 
+                        Processed over 73,000 text lines using advanced NLP techniques and achieved 
+                        21.43 validation perplexity with 76.2% improvement in language fluency.
+                    </p>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <strong>21.43</strong> Validation Perplexity
+                        </div>
+                        <div class="achievement">
+                            <strong>76.2%</strong> Fluency Improvement
+                        </div>
+                    </div>
+                </div>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      <b>Email:</b> <a href="mailto:rrshanmugapriya01@gmail.com">rrshanmugapriya01@gmail.com</a><br>
-      <b>GitHub:</b> <a href="https://github.com/rrshanmugapriya01gmailcom" target="_blank">github.com/rrshanmugapriya01gmailcom</a><br>
-      <b>LinkedIn:</b> <a href="https://linkedin.com/in/shanmugapriya-rr" target="_blank">linkedin.com/in/shanmugapriya-rr</a><br>
-      <b>Phone:</b> 9360721729
-    </p>
-  </section>
+                <div class="project-card">
+                <div class="project-header">
+                        <h3>Solar Panel Defect Detection</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/rrshanmugapriya01gmailcom/SolarPanel_Defect_Detection" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">ResNet-152</span>
+                        <span class="tech-tag">YOLO11n</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">FastAPI</span>
+                    </div>
+                    <p class="project-description">
+                        Built a deep learning pipeline for classifying and detecting 6 types of solar panel faults 
+                        using labeled images. Applied advanced image preprocessing and trained YOLO11n using 
+                        annotated bounding boxes.
+                    </p>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <strong>88.76%</strong> Test Accuracy
+                        </div>
+                        <div class="achievement">
+                            <strong>60%</strong> Time Reduction
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                <div class="project-header">
+                        <h3>Interactive Tourism Analytics Dashboard</h3>
+                        <div class="project-links">
+                            <a href="https://tourism-experience-analysis-qrrakq97ev3fulytg6u6re.streamlit.app/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/rrshanmugapriya01gmailcom/Tourism-Experience-Analysis" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">Streamlit</span>
+                    </div>
+                    <p class="project-description">
+                        Developed a comprehensive analytics dashboard with hyperparameter tuning using GridSearchCV. 
+                        Applied XGBoost for attraction rating prediction and built hybrid recommendation engine 
+                        using cosine similarity.
+                    </p>
+                    <div class="project-achievements">
+                        <div class="achievement">
+                            <strong>0.7283</strong> R² Score
+                        </div>
+                        <div class="achievement">
+                            <strong>67.46%</strong> Classification Accuracy
+                        </div>
+                        <div class="achievement">
+                            <strong>40%</strong> Recommendation Improvement
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>IITM Pravartak Certified Advanced Programming Professional and Master Data Science</h3>
+                        <span class="education-date">Jan 2025 - May 2025</span>
+                    </div>
+                    <p class="education-institution">IITM Guvi</p>
+                </div>
+                <div class="education-item">
+                    <div class="education-header">
+                        <h3>Bachelor of Arts in Sociology</h3>
+                        <span class="education-date">Jul 2019 - Apr 2022</span>
+                    </div>
+                    <p class="education-institution">MOP Vaishnav College for Women, Chennai, IN</p>
+                    <p class="education-grade">CGPA: 7.52</p>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <h3>Professional Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Scikit-Learn for Machine Learning - Guvi</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>MySQL - Guvi</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Probability and Statistics for Data Science - Guvi</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Data Analytics Using Pandas - Guvi</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Python - Guvi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always interested in discussing new opportunities, innovative projects, 
+                        or collaborations in AI and Machine Learning.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:rrshanumugapriya01@gmail.com">rrshanumugapriya01@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:9360721729">+91 9360721729</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/shanmugapriya-rr/" target="_blank">LinkedIn Profile</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/rrshanmugapriya01gmailcom" target="_blank">GitHub Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Shanmugapriya R R. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
