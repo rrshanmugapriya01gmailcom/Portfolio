@@ -3,7 +3,7 @@
 A professional portfolio website showcasing expertise in Artificial Intelligence, Machine Learning, Computer Vision, Deep Learning, and Large Language Models.
 
 ## 🚀 Live Demo
-[View Portfolio](https://rrshanmugapriya01gmailcom.github.io/portfolio/)
+[View Portfolio](https://rrshanmugapriya01gmailcom.github.io/Portfolio/)
 
 ## 📋 Features
 
